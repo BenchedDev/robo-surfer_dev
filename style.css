@@ -1,0 +1,99 @@
+:root {
+  --bg-dark: oklch(0.1 0.02 264);
+  --bg: oklch(0.15 0.02 264);
+  --bg-light: oklch(0.2 0.02 264);
+  --text: oklch(0.96 0.04 264);
+  --text-muted: oklch(0.76 0.04 264);
+  --highlight: oklch(0.5 0.04 264);
+  --border: oklch(0.4 0.04 264);
+  --border-muted: oklch(0.3 0.04 264);
+  --primary: oklch(0.76 0.1 264);
+  --secondary: oklch(0.76 0.1 84);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+}
+
+/* Make the body a flex column so footer can stick */
+html, body {
+  height: 100%;              /* ensure full viewport height */
+  margin: 0;                 /* reset margin */
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 30px;
+  padding-bottom: 100px; /* extra space for fixed footer */
+  max-width: 800px;
+  margin: 40px auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+h1, h2 {
+  color: var(--primary);
+  margin-top: 1.5em;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+p, li {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+strong {
+  color: var(--highlight);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--text-muted);
+  
+  /* Glassmorphism style */
+  background: var(--bg-light);
+  background: rgba(40, 40, 60, 0.6); /* semi-transparent overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  
+  border-top: 1px solid var(--border-muted);
+  z-index: 100; /* keeps it above content */
+}
+
+
+
+
+
